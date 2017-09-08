@@ -6,13 +6,13 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1504901761745"
+    timestamp="1504902576557"
     token="6199465645342867820"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="164" />
+        duration="266" />
     <task
         name="instant-run-dex"
         duration="0" />
@@ -21,7 +21,7 @@
         duration="37" />
     <task
         name="verifier"
-        duration="5" />
+        duration="4" />
 
     <artifact
         location="C:\Android\lab03-skeleton\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -70,7 +70,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1504901761745"
+        timestamp="1504902576557"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Android\lab03-skeleton\app\build\intermediates\split-apk\debug\slices\slice_7.apk"

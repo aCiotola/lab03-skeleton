@@ -63,14 +63,37 @@ public class ActivityOne extends Activity {
 	    // TODO: implement 5 missing lifecycle callback methods
 
 		@Override
-		public void onSaveInstanceState(Bundle savedInstanceState){
+		public void onSaveInstanceState(Bundle savedInstanceState)
+		{
+			super.onSaveInstanceState(savedInstanceState);
+			savedInstanceState.putInt("createCounter", createCounter);
+			savedInstanceState.putInt("startCounter", startCounter);
+			savedInstanceState.putInt("resumeCounter", resumeCounter);
+			savedInstanceState.putInt("pauseCounter", pauseCounter);
+			savedInstanceState.putInt("stopCounter", stopCounter);
+			savedInstanceState.putInt("restartCounter", restartCounter);
+			savedInstanceState.putInt("destroyCounter", destroyCounter);
+
 			//TODO:  save state information with a collection of key-value pairs & save all  count variables
+
 		}
 
 
 		public void launchActivityTwo(View view) {
 			startActivity(new Intent(this, ActivityTwo.class));
 		}
+
+	public void onRestoreInstanceState(Bundle savedInstanceState)
+	{
+		super.onRestoreInstanceState(savedInstanceState);
+		createCounter = savedInstanceState.getInt("createCounter");
+		restartCounter = savedInstanceState.getInt("restartCounter");
+		startCounter = savedInstanceState.getInt("startCounter");
+		resumeCounter = savedInstanceState.getInt("resumeCounter");
+		stopCounter = savedInstanceState.getInt("stopCounter");
+		destroyCounter = savedInstanceState.getInt("destroyCounter");
+		pauseCounter = savedInstanceState.getInt("pauseCounter");
+	}
 
 	@Override
 	protected void onResume() {
